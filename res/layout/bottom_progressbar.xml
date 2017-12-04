@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 底部播放控制条 -->
+
+    <com.tiantiankuyin.view.EasouSlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+       
+        >
+
+        <!-- 抽屉把手 （迷你进度条） -->
+
+        <LinearLayout
+            android:id="@+id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- mini控制条 -->
+
+            <LinearLayout
+                android:id="@+id/mini_playControl"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                 android:background="@drawable/bottom_control_background_img_repeat"
+                android:orientation="vertical" >
+ 				<!-- mini控制条进度条 -->
+ 				<!-- 拖动seekbar -->
+		      <SeekBar
+		        android:id="@+id/seekBar"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:maxHeight="3dip"
+		        android:minHeight="3dip"           
+		        android:progressDrawable="@drawable/seekbar_img"
+		        android:thumb="@null"
+		      />
+                 <!-- mini控制条下部分内容 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_play" >
+                    <!-- 歌手小图片 -->
+                    <ImageView
+                        android:layout_width="45dip"
+                        android:layout_height="45dip" 
+                        android:id="@+id/mini_singer_iamge"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dip"
+                        android:src="@drawable/bottom_control_song_default_img"
+                        />
+                    <!-- 歌曲名称 和歌手名称 -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:orientation="vertical" >
+						<!-- 播放歌曲名称-->
+                        <TextView
+                            android:layout_width="160dip"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mini_song_name"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="#FFFFFF"
+                    		android:textSize="15sp" />
+						<!-- 播放歌手名称-->
+                        <TextView
+                            android:layout_width="160dip"
+                            android:layout_height="wrap_content"
+                             android:id="@+id/mini_singer_name"
+                            android:textColor="#7B7B7B"
+                    		android:textSize="12sp"
+                    		android:layout_marginTop="5dip"
+                    		  android:singleLine="true"
+                            android:ellipsize="end"
+                     />
+                    </LinearLayout>
+					
+					<LinearLayout 
+					      android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+					    android:orientation="horizontal"
+					    android:layout_gravity="right|center"
+					    android:gravity="right|center"
+					    android:layout_marginRight="5dip"
+					    >
+                        <!-- 暂停或者开始播放 -->
+	                    <ImageButton
+	                        android:id="@+id/mini_play"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                         android:background="@null"/>
+	               
+	                    
+	                    <ImageView
+	                        android:id="@+id/mini_play_un"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:visibility="gone"
+	                        android:src="@drawable/bottom_control_play_btn_un" 
+	                    />
+	                    
+	                    <LinearLayout
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:gravity="center"
+					        android:visibility="gone"
+					         android:id="@+id/waiting"
+					        android:background="@drawable/bottom_control_loading_btn_default" >
+					        <ProgressBar
+					            android:id="@+id/waiting2"
+					            style="@android:attr/progressBarStyleSmall"
+					            android:layout_width="20dip"
+					            android:layout_height="20dip"
+					            android:indeterminateDrawable="@drawable/online_recommond_loading_small"/>
+					    </LinearLayout>
+
+						<!-- 下一首 -->
+	                    <ImageButton
+	                          android:id="@+id/mini_next"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                         android:background="@null"
+	                         android:layout_marginLeft="10dip"
+	                         android:paddingRight="6dip"
+	                        android:src="@drawable/bottom_control_next_btn_click" />
+	                    
+	                   	<ImageView 
+	                   	    android:id="@+id/mini_next_un"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                         android:background="@null"
+	                         android:layout_marginLeft="10dip"
+	                         android:paddingRight="6dip"
+	                         android:visibility="gone"
+	                        android:src="@drawable/bottom_control_next_btn_un" 
+	                   	    />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			<!-- mini播放控制条 拉升后的头部 -->
+            <LinearLayout
+                android:id="@+id/play_view_top"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                 android:background="@color/backgroud1"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+               <ImageButton
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dip"
+	            android:layout_gravity="center"
+	            android:background="@drawable/top_back_btn_click" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/songName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/singerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                          android:textColor="#fff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 抽屉内容 -->
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:gravity="bottom" >
+        </LinearLayout>
+    </com.tiantiankuyin.view.EasouSlidingDrawer>
+
+</LinearLayout>

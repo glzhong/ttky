@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 对话框标题 -->
+
+    <include
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/dialog_title" />
+
+    <!-- 显示list布局容器 -->
+
+    <LinearLayout
+        android:id="@+id/online_dialog_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background_img"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

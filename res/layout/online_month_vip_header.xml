@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <!-- 推荐页 -->
+    <!--  -->
+	<ImageView
+	      android:id="@+id/mimu_music"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_alignParentTop="true" 
+          android:scaleType="fitXY"
+          android:background="@drawable/mimu_music"/>
+    <include
+        android:id="@+id/bannerContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/mimu_music"
+        layout="@layout/online_recommend_banner_container" />
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 + 返回键 + 全选框 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            layout="@layout/title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="38dip"
+            android:text="全选"
+            android:textColor="#efffc8"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/local_scan_folder_checkAll"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/top_select_all_cb_click" />
+    </RelativeLayout>
+
+    <!-- 中间ListView 多项选择 -->
+
+
+    <!-- 向上 按钮 -->
+
+    <LinearLayout
+        android:id="@+id/local_scan_folder_goParentFolder_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="#d0d0d0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/local_scan_folder_current_path"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="向上..."
+            android:textColor="#505050"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dip"
+            android:src="@drawable/scan_folder_upload_icon_img" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/local_scan_folder_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:background="#f8f8f8"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider_line_img"
+        android:dividerHeight="1dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="true"
+        android:listSelector="@drawable/item_selector"
+        android:scrollbars="vertical"
+        android:scrollingCache="false" >
+    </ListView>
+
+    <!-- 底部 返回 + 开始扫描按钮 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#d0d0d0"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/local_scan_folder_startScan"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bottom_button_btn_click"
+                android:text="开始扫描"
+                android:textColor="#7b7b7b"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/local_scan_folder_goBack"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bottom_button_btn_click"
+                android:text="返回"
+                android:textColor="#7b7b7b"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

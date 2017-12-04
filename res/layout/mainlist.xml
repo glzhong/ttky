@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"  
+    android:layout_height="wrap_content"  
+    android:orientation="vertical" >  
+    <LinearLayout  
+        android:orientation="vertical"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+         >  
+        <Button  
+            android:id="@+id/tv1"  
+            android:layout_width="fill_parent"  
+            android:layout_height="50dip"  
+            android:textColor="#505050"  
+            android:textSize="11pt"  
+            android:gravity="center_vertical"  
+            android:text="天天酷音超品质30元音乐"  
+            />   
+         <Button   
+            android:id="@+id/tv2"  
+            android:layout_width="fill_parent"  
+            android:layout_height="50dip"  
+            android:textColor="#505050"  
+            android:textSize="11pt"  
+            android:gravity="center_vertical"  
+            android:text="天天酷音10元动听新享受" 
+            android:visibility="gone" 
+            /> 
+          <Button   
+            android:id="@+id/tv3"  
+            android:layout_width="fill_parent"  
+            android:layout_height="50dip"  
+            android:textColor="#505050"  
+            android:textSize="11pt"  
+            android:gravity="center_vertical"  
+            android:text="天天酷音10元特色最前沿"  
+            /> 
+    </LinearLayout>  
+ 
+</LinearLayout> 

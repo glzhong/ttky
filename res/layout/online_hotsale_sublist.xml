@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <include
+           android:layout_width="fill_parent"
+           android:layout_height="45dip"
+           layout="@layout/title" />
+     <ListView
+           android:id="@+id/musicList"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:cacheColorHint="#00000000"
+           android:divider="@drawable/list_divider_line_img"
+           android:dividerHeight="1dip"
+           android:drawSelectorOnTop="false"
+           android:fadingEdge="none"
+           android:fastScrollEnabled="true"
+           android:footerDividersEnabled="true"
+            android:listSelector="@drawable/item_selector"
+           android:scrollbars="vertical"
+           android:scrollingCache="false" />
+     
+     <include
+      android:id="@+id/loading"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      layout="@layout/loading_layout" />
+     
+     
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include
+            android:id="@+id/neterror_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            layout="@layout/neterror_layout" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="szf_app_name">神州付游戏充值</string>
+    <string name="szf_phone_title">神州付游戏充值</string>
+	<string name="szf_phone_sure">确    认</string>
+	<string name="szf_rechargeremind"><b>充值须知：</b>\n</string>
+	<string name="szf_Serviceprd">充值服务商：</string>
+	<string name="szf_gameaccount">游戏账号：</string>
+	<string name="szf_rechargemoney">充值金额：</string>
+	<string name="szf_transaction">交易号：</string>
+	<string name="szf_gamename">游戏名称：</string>
+	<string name="szf_gameback_text">返回游戏</string>
+	<string name="szf_newrecharge_text">重新充值</string>
+	<string name="szf_chooiceoperators">请选择运营商</string>
+	<string name="szf_chooicerechargemoney">请选择充值面额</string>
+	<string name="szf_recharging">充值中，请稍后 ···</string>
+	<string name="szf_rechargefailreason">失败原因：</string>
+	<string name="szf_surplusmoney">余额：</string>
+	<string name="szf_card">卡号：</string>
+	<string name="szf_tell">客服联系方式 ：400-0010-195</string>
+	<string name="szf_rechargefail">充值失败！</string>
+	<string name="szf_rechargesuccess">充值成功！</string> 
+	<string name="szf_password_keyboard_sure">确定</string>
+</resources> 

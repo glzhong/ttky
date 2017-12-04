@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 搜索_搜索页 -->
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            layout="@layout/title" />
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/online_recommend_pot_bg_img"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <!-- 用来抢edittext的焦点的 一打开这个界面不调出键盘 -->
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="10dip"
+                android:layout_height="0dip" >
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/dialog_input_bg_img"
+                android:drawableLeft="@drawable/search_input_icon_img"
+                android:drawablePadding="5dip"
+                android:hint="查找你喜欢的歌手或者歌曲吧!"
+                android:textColorHint="#7b7b7b"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="10dip"
+                android:layout_height="0dip" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 无用的view 主要是用来撑开屏幕宽度 -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/hot_key_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+           >
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/loading_layout"
+           />
+
+        <!--
+             <include
+             android:id="@+id/neterror_lay"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+              android:visibility="gone"
+             layout="@layout/neterror_layout" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/no_network_tips"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:layout_marginTop="20dip"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_network_title" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:src="@drawable/no_network_text" />
+
+            <Button
+                android:id="@+id/fresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="70dip"
+                android:layout_marginRight="70dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/dialog_button_bg"
+                android:text="刷新"
+                android:textColor="#505050"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

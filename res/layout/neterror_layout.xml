@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:gravity="center"
+     >
+
+<LinearLayout
+    android:id="@+id/no_network_tips"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="gone" 
+    >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_network_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:src="@drawable/no_network_text" />
+
+        <Button
+            android:id="@+id/fresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="70dip"
+            android:layout_marginRight="70dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/dialog_button_bg"
+            android:text="刷新"
+            android:textColor="#505050"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

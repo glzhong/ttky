@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 顶部导航 -->
+
+    <include
+        android:id="@+id/online_head_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/online_head_navigation" />
+
+    <!-- 在线内容显示pager -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/online_head_navigation"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+ 	<include
+            android:id="@+id/neterror_lay"
+            android:layout_below="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/neterror_layout" />
+</RelativeLayout>

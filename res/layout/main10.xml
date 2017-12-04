@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"  
+    android:layout_height="wrap_content"  
+    android:orientation="vertical" 
+    android:background="#fff"> 
+        <include
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/title" />
+        <TextView   
+            android:id="@+id/tv1"  
+            android:layout_width="fill_parent"  
+            android:layout_height="50dip"  
+            android:text="业务介绍：独家专向的动听新享受音乐，天天酷音10元动听新享受业务，可以批量下载任意10首歌曲"
+            android:textSize="6pt"  
+            android:gravity="center_vertical"  
+            android:layout_marginLeft="10dip"  
+            />  
+     <RelativeLayout   
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:orientation="horizontal"  
+        >  
+        <Button   
+            android:id="@+id/selectall"  
+            android:layout_width="wrap_content"      
+            android:layout_height="50dip"  
+            android:layout_marginLeft="20dip"  
+            android:text="全选"  
+            android:gravity="center" 
+            android:visibility="visible" 
+            />  
+        <Button   
+            android:id="@+id/inverseselect"  
+            android:layout_width="wrap_content"      
+            android:layout_height="50dip"  
+            android:layout_marginLeft="80dip"  
+            android:text="反选"  
+            android:gravity="center"  
+            />  
+        <Button   
+            android:id="@+id/cancel"  
+            android:layout_width="wrap_content"      
+            android:layout_height="50dip"  
+            android:layout_marginLeft="140dip"  
+            android:text="取消"  
+            android:gravity="center"  
+            />  
+          <Button   
+            android:id="@+id/download"  
+            android:layout_width="wrap_content"      
+            android:layout_height="50dip"  
+            android:layout_marginLeft="200dip"  
+            android:text="下载"  
+            android:gravity="center"  
+            /> 
+    </RelativeLayout>   
+    <LinearLayout  
+        android:orientation="vertical"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+         >  
+        <TextView   
+            android:id="@+id/tv"  
+            android:layout_width="fill_parent"  
+            android:layout_height="50dip"  
+        
+            android:textSize="11pt"  
+            android:gravity="center_vertical"  
+            android:layout_marginLeft="10dip"  
+            />   
+    <ListView  
+        android:id="@+id/lv"  
+        android:layout_width="fill_parent"  
+        android:layout_height="381dip"  
+        android:cacheColorHint ="#00000000"  
+        android:visibility="visible">
+        
+    </ListView>  
+    </LinearLayout>  
+        
+</LinearLayout> 

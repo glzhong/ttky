@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:text="意见反馈"
+        android:textColor="#505050"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_weight="1"
+        android:background="@drawable/dialog_input_bg_img"
+        android:gravity="left|top"
+        android:hint="请将您的建议和意见反馈给我们,请尽可能详细哦！"
+        android:lines="7"
+        android:maxLength="1000"
+        android:textColor="#7b7b7b"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="70dip"
+        android:layout_marginRight="70dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/dialog_button_bg"
+        android:text="确定"
+        android:textColor="#505050"
+        android:textSize="18sp" />
+
+</LinearLayout>

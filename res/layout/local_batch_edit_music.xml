@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 头部栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            layout="@layout/title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="38dip"
+            android:text="@string/local_batch_edit_music_checkAll"
+            android:textColor="#efffc8"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/local_batch_edit_music_checkAll"
+            android:layout_width="50dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/top_select_all_cb_click" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/local_batch_edit_music_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:background="#fff"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider_line_img"
+        android:dividerHeight="1dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="true"
+        android:listSelector="@drawable/item_selector"
+        android:scrollbars="vertical"
+        android:scrollingCache="false" >
+    </ListView>
+
+    <!-- 底部批量操作布局 -->
+    <LinearLayout
+        android:id="@+id/local_batch_edit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#d0d0d0"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/local_batch_edit_music_addTo"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bottom_button_btn_click"
+                android:text="@string/local_batch_edit_music_addTo"
+                android:textColor="#505050"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/local_batch_edit_music_delete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bottom_button_btn_click"
+                android:text="@string/local_batch_edit_music_delete"
+                android:textColor="#505050"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部 添加到的布局 -->
+    <LinearLayout
+        android:id="@+id/local_batch_addto_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#d0d0d0"
+        android:gravity="center_vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/local_batch_edit_music_ok"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bottom_button_btn_click"
+                android:text="@string/local_batch_edit_music_ok"
+                android:textColor="#505050"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/local_batch_edit_music_cancel"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bottom_button_btn_click"
+                android:text="@string/local_batch_edit_music_cancel"
+                android:textColor="#505050"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

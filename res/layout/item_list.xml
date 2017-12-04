@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1ebf0"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <!-- android:descendantFocusability="blocksDescendants" -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="1"
+            android:textColor="#505050"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/songId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:textColor="#505050"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/songinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pid"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/musicName"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="3dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="aaa"
+                android:textColor="#736971"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/musicArtist"
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="2dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="bbaaaaaa"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/songinfo"
+            android:gravity="center"
+            android:paddingRight="30dip" >
+
+            <ImageView
+                android:id="@+id/play_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/list_item_play_img"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_musicOperate"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            >
+
+            <CheckBox
+                android:id="@+id/item_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/select_checkbox"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:focusable="false"
+                 android:gravity="center_vertical"
+                android:focusableInTouchMode="false" 
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/item_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_listen"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+       
+    </RelativeLayout>
+
+</LinearLayout>

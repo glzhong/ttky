@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/downloadedListview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider_line_img"
+        android:dividerHeight="1dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="vertical"
+        android:scrollingCache="false" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/clearAllDownloaded"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:background="#dcdcdc"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/dialog_delete_icon_img"
+            android:drawablePadding="10dip"
+            android:gravity="center"
+            android:text="@string/clearAll"
+            android:textColor="#505050" />
+    </LinearLayout>
+
+</LinearLayout>

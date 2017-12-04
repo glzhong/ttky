@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- 顶部导航栏 -->
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="@color/backgroud1" >
+
+        <RadioGroup
+            android:id="@+id/tab_group_online_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/recommend"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="推荐"
+                android:textColor="@drawable/online_navigation_selector" />
+
+            <RadioButton
+                android:id="@+id/hotsale"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="榜单"
+                android:textColor="@drawable/online_navigation_selector" />
+
+            <RadioButton
+                android:id="@+id/omnibus"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="精选集"
+                android:textColor="@drawable/online_navigation_selector" />
+             <RadioButton
+                android:id="@+id/monthVip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="包月专区"
+                android:textColor="@drawable/online_navigation_selector"
+                android:visibility="gone" 
+               /> 
+            <!-- <RadioButton
+                android:id="@+id/singer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="1元包歌单"
+                android:textColor="@drawable/online_navigation_selector" />
+                --> 
+                 <RadioButton
+                android:id="@+id/category"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="会员专区"
+                android:textColor="@drawable/online_navigation_selector" />
+                             
+        </RadioGroup>
+    </RelativeLayout>
+
+</RelativeLayout>

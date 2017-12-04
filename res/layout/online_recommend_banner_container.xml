@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <com.tiantiankuyin.view.EasouBannerGallery
+        android:id="@+id/banner_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="120dip"
+        android:fadingEdgeLength="0dip"
+        android:soundEffectsEnabled="false"
+        android:spacing="0.0dip" />
+
+    <LinearLayout
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="15dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/online_recommend_pot_bg_img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <include
+            android:id="@+id/pointContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/indicate_point" >
+        </include>
+    </LinearLayout>
+
+</FrameLayout>

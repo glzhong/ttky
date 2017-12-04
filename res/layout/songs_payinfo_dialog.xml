@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 对话框标题 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_title_tv_color"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/contentTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="订购流程"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- 对话框正文内容 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/dialog_background_img"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/contentTxt2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="流行歌曲振铃"
+            android:textColor="#484848"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/song_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/scan_quick_btn_default"
+                android:gravity="center"
+                android:text="伤口"
+                 
+                android:textSize="20dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/check_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="编辑短信DCZL@0141061263378300089发送到10658436只需2元/每首即可拥有，快来订购吧，一个月重复订购免费\n客服电话：4006058807"
+            android:textColor="#484848"
+            android:textSize="15dip" />
+    </LinearLayout>
+
+</LinearLayout>

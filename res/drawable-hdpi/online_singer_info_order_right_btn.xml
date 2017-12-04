@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/online_singer_info_order_right_press_img" android:state_pressed="false"/>
+    <item android:drawable="@drawable/online_singer_info_order_right_default_img" android:state_pressed="true"/>
+    <item android:drawable="@drawable/online_singer_info_order_right_default_img" android:state_focused="true"/>
+    <item android:drawable="@drawable/online_singer_info_order_right_press_img"/>
+
+</selector>

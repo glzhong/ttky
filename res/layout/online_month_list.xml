@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+	<LinearLayout
+                android:id="@+id/one_vip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_line"
+               android:visibility="gone"  >
+                <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:text="6元包月包"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:visibility="gone"/>
+				
+               </LinearLayout>
+            <LinearLayout
+                android:id="@+id/one_vip_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical" >
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/four_vip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bottom_line"
+                android:orientation="horizontal" 
+                android:visibility="visible">
+                 <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:text="四元包月专区"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:gravity="left|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/four_vip_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:visibility="visible"
+                android:orientation="vertical" >
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/six_vip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                 android:background="@drawable/bottom_line"
+                android:orientation="horizontal"  android:visibility="visible">
+                 <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:text="六元包月专区"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:gravity="left|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/six_vip_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/eight_vip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                 android:background="@drawable/bottom_line"
+                 android:orientation="horizontal"  android:visibility="visible">
+                 <TextView 
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:text="八元包月专区"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:gravity="left|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/eight_vip_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical" >
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ten_vip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bottom_line"
+                android:orientation="horizontal"  android:visibility="visible">
+                <TextView 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="十元包月专区"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:gravity="left|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ten_vip_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical" >
+            </LinearLayout>
+             <LinearLayout
+                android:id="@+id/mianze"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bottom_line"
+                android:orientation="horizontal" >
+                <TextView 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="免责声明"
+                android:textColor="#4d9b74"
+                android:layout_marginLeft="5dp"
+                android:textSize="18dp"
+                android:gravity="left|center_vertical"/>
+            </LinearLayout>
+</LinearLayout>

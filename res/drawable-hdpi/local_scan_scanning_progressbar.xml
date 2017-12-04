@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/playview_function_sound_seekbar_default_img"/>
+    <item android:id="@android:id/progress">
+        <clip android:drawable="@drawable/playview_function_sound_seekbar_bright_img" >
+        </clip>
+    </item>
+
+</layer-list>

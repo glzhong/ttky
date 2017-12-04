@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/singer_image"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/playview_main_singer_img" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/singer_image" >
+
+        <com.tiantiankuyin.view.LrcView
+            android:id="@+id/mini_lyric"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="12dip"
+            android:layout_marginBottom="12dip"
+            android:scrollHorizontally="true"
+            android:scrollbars="none" 
+            android:layout_gravity="center">
+        </com.tiantiankuyin.view.LrcView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_gravity="top">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/lyric_mask_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/lyric_mask_bottom" />
+    </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

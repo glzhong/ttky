@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gallery_backgroud">#B940A0</color>
+    <color name="dialog_backgroud">#00000000</color>
+    <color name="local_folder_list_item_default">#ffffff</color>
+    <color name="local_folder_list_item_press">#F7F7F7</color>
+     <color name="backgroud1">#B940A0</color>
+
+    <!-- 弹窗 -->
+    <color name="dialog_item_text_tv_color">#505050</color>
+    <color name="dialog_item_divider_line_color">#aeaeae</color>
+    <color name="dialog_item_btn_default_color">#ffffff</color>
+    <color name="dialog_item_btn_press_color">#dddddd</color>
+    
+    
+	<color name="online_btn_press">#bababa</color>
+	<color name="online_btn_default">#dcdcdc</color>
+
+	<color name="lrc_height_light">#ff699216</color>
+	<color name="lrc_default">#ffbababa</color>
+	<color name="lrc_time">#505050</color>
+	<color name="dialog_bg">#d2d2d2</color>
+	<drawable name="btn_focused">#ffffff</drawable>  
+    <drawable name="btn_normal">#ff0000</drawable> 
+    <drawable name="btn_focused1">#ff0000</drawable>  
+    <drawable name="btn_normal1">#ffffff</drawable> 
+    <color name="text_color_b">#ff000000</color>
+    <color name="text_color_c">#ffffff</color>
+</resources>

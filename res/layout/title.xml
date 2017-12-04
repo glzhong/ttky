@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud1"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:clickable="false"
+        android:scaleType="center"
+        android:src="@drawable/top_back_btn_click" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:ellipsize="end"
+        android:text="@string/artist"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/edit_btn"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="center"
+        android:src="@drawable/top_edit_btn_click"
+        android:visibility="invisible" />
+
+</RelativeLayout>

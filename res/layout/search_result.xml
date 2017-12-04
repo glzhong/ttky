@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 搜索_搜索页 -->
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            layout="@layout/title" />
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/online_recommend_pot_bg_img"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <!-- 用来抢edittext的焦点的 一打开这个界面不调出键盘 -->
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="10dip"
+                android:layout_height="0dip" >
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/dialog_input_bg_img"
+                android:drawableLeft="@drawable/search_input_icon_img"
+                android:hint="查找你喜欢的歌手或者歌曲吧!"
+                android:textColorHint="#7b7b7b"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="10dip"
+                android:layout_height="0dip" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 纠错词 -->
+
+        <LinearLayout
+            android:id="@+id/ask_wrong"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/search_result_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="#505050"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/error_word"
+                    android:layout_width="160dip"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#7ba21d"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/search_result_tips_after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#505050"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/list_divider_line_img" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_result_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/musicList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/list_divider_line_img"
+                android:dividerHeight="1dip"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:footerDividersEnabled="true"
+                android:background="@drawable/item_bg"
+                android:listSelector="@drawable/item_selector"
+                android:scrollbars="vertical"
+                android:scrollingCache="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/loading_layout" />
+
+</LinearLayout>

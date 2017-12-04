@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <!-- 本地模块_扫描 -->
+
+
+    <!-- 顶部标题 -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/title" />
+
+    <!-- 中间引导页 -->
+
+    <include
+        android:id="@+id/bannerContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        layout="@layout/local_scan_banner_container" />
+    <!-- 底部扫描控制与状态 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#E4E4E4"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:background="@drawable/scan_bottom_bg_img"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <!-- 左边的“手机” -->
+
+            <RelativeLayout
+                android:layout_width="70dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip" >
+
+                <ImageView
+                    android:id="@+id/local_scan_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/scan_mobile_img" />
+
+                <ImageView
+                    android:id="@+id/local_scan_glass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/scan_glass_img" />
+            </RelativeLayout>
+
+            <!-- 扫描前的布局 -->
+
+            <LinearLayout
+                android:id="@+id/local_scan_scan_layout"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/local_scan_quickScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:layout_marginBottom="15dip"
+                    android:background="@drawable/scan_quick_btn_click"
+                    android:paddingTop="2dip"
+                    android:paddingLeft="30dip"
+                    android:paddingRight="30dip"
+                    android:paddingBottom="2dip"
+                    android:text="快速扫描"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/local_scan_dirScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:background="@drawable/dialog_button_bg"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="20dip"
+                    android:text="文件夹扫描"
+                    android:textColor="#505050"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- 扫描时的布局 -->
+
+            <LinearLayout
+                android:id="@+id/local_scan_scanning_layout"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已经扫描了"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/local_scan_scanning_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="多少"
+                        android:textColor="#ff0000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="首歌"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/local_scan_scanningProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:minHeight="7dip"
+                    android:progressDrawable="@drawable/local_scan_scanning_progressbar" />
+
+                <Button
+                    android:id="@+id/local_scan_goBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:background="@drawable/dialog_button_bg"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="20dip"
+                    android:text="后台运行"
+                    android:textColor="#505050"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- 扫描后的布局 -->
+
+            <LinearLayout
+                android:id="@+id/local_scan_scanned_layout"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="共扫描到歌曲"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/local_scan_completed_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#ff0000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="首"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                
+                <Button
+                    android:id="@+id/local_scan_goPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dip"
+                    android:background="@drawable/dialog_button_bg"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="20dip"
+                    android:text="去听歌"
+                    android:textColor="#505050"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

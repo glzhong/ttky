@@ -1,0 +1,184 @@
+<resources>
+
+    <string name="welcome">天天酷音</string>
+    <string name="name">天天酷音</string>
+    <string name="app_name">天天酷音_1.0</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="local_music">本地歌曲</string>
+    <string name="online_music">在线曲库</string>
+    <string name="search_music">搜索</string>
+    <string name="all_music">全部音乐</string>
+    <string name="artist">歌手</string>
+    <string name="album">专辑</string>
+    <string name="folder">文件夹</string>
+    <string name="fav">我的最爱</string>
+    <string name="recent">最近添加</string>
+    <string name="add_songlist">新建歌单</string>
+    <string name="add_songlist_hint">起个好听的歌单名吧</string>
+    <string name="songlist_name">歌单名:</string>
+    <string name="confirm">确定</string>
+    <string name="folder_count">首歌曲</string>
+    <string name="folder_path">路径:</string>
+    <string name="songlist_null">歌单名不能为空</string>
+    <string name="songlist_create_success">歌单创建成功</string>
+    <string name="songlist_exsit">你有这个歌单了哦</string>
+    <string name="songlist_length">歌单名太长</string>
+    <string name="songlist_operator">歌单操作</string>
+    <string name="rename_songlist">重命名歌单</string>
+    <string name="delete_songlist">删除歌单</string>
+    <string name="songlist_add_songlistName">歌单名:</string>
+    <string name="songlist_add_songlistname_null">歌单名不能为空</string>
+    <string name="singer_song">首歌曲</string>
+    <string name="add_song_first">请添加歌曲</string>
+    <string name="add_to_songlist">歌曲添加到</string>
+    <string name="add_to_songlist_success">添加成功</string>
+    <string name="select_songlist">请选择要添加的歌单</string>
+    <string name="cancel_love">取消喜欢</string>
+    <string name="cancel">取消</string>
+    <string name="love_success">喜欢这首歌</string>
+    <string name="delete_tips">删除提示</string>
+    <string name="confirm_delete">你确定删除</string>
+    <string name="and_local_file">以及本地文件吗？</string>
+    <string name="song_delete_succuess">歌曲删除成功</string>
+    <string name="songlist_delete_succuess">歌单删除成功</string>
+    <string name="ask">吗</string>
+    <string name="delete_local_file">同时删除源文件</string>
+    <string name="delete_message">你确定删除该歌单吗?</string>
+    <string name="cycle">循环播放</string>
+    <string name="single">单曲播放</string>
+    <string name="random">随机播放</string>
+    <string name="order">顺序播放 </string>
+    <string name="rename_songlist_success">重命名成功 </string>
+    <string name="ask_delete_songlist">你确定删除该歌单吗? </string>
+    <string name="delete_songlist_success">歌单删除成功</string>
+    <string name="delete_songlist_fail">歌单删除失败</string>
+    <string name="clear_up_search_history">清空搜索历史</string>
+    <string name="clear_up_search_history_success">清空搜索历史成功</string>
+    <string name="ask_search_wrong">你是否想要搜索</string>
+    <string name="similar_tips">这首歌的相似歌曲</string>
+    <string name="singer_tips">歌手的其他歌曲</string>
+    <string name="selected_tips">歌曲所属精选集</string>
+    <string name="wifi_download_title">预约下载音质版本</string>
+    <string name="wifi_download_high">高品质版</string>
+    <string name="wifi_download_fluent">流畅版</string>
+    <string name="wifi_download_high_value">(3M以上)</string>
+    <string name="wifi_download_fluent_value">(1-2M)</string>
+    <string name="online_music_playmodel_title">在线歌曲播放模式</string>
+    <string name="online_music_playmodel_traffic">省流量</string>
+    <string name="online_music_playmodel_standrd"> 标准</string>
+    <string name="online_music_playmodel_standrd_desc">2G/3G网络按在线歌曲列表播放</string>
+    <string name="online_music_playmodel_traffic_desc">2G/3G网络只播放当前一首，播放完后停止</string>
+    <string name="feedback_easou">意见反馈内容不能为空</string>
+    <string name="no_network">当前无网络亲...</string>
+    <string name="disneed_update">已经是最新版本，无需升级</string>
+    <string name="error_update">网络连接失败</string>
+    <string name="local_have_no_song_end">已是最后一首</string>
+ 	<string name="local_have_no_song_first">已是第一首</string>
+ 	<string name="love_buffer_finish">缓存完的歌曲才能“喜欢”哦</string>
+ 	<string name="has_no_net">当前无可用的网络</string>
+ 	<string name="has_no_lrc">抱歉,未搜索到歌词</string>
+ 	<string name="lrc_search_ing">正在搜索歌词...</string>
+ 	<string name="songlist_count_exceed">歌单数量到上限了，鸭梨好大</string>
+ 	<string name="songlist_rename_null">起个新名字吧</string>
+ 	<string name="feedback_text_count">字数不能超过3000个</string>
+ 	<string name="string_nofile">当前播放文件已被删除，请重新下载</string>
+    <!-- Global___Start -->
+
+
+    <!-- dialog操作内容 -->
+    <string name="dialog_add">添加到</string>
+    <string name="dialog_delete">删除</string>
+    <string name="dialog_share">分享</string>
+    <string name="dialog_share_content">我正在#天天酷音 for andriod#收听歌曲“</string>
+    <string name="dialog_share_content_null">我正在#天天酷音#收听歌曲</string>
+    <string name="dialog_share_content_end">”</string>
+    <string name="dialog_share_title_sina">分享到新浪微博</string>
+    <string name="dialog_share_title_tencent">分享到腾讯微博</string>
+    <string name="dialog_fav">喜爱</string>
+    <string name="dialog_ok">确 定 </string>
+    <string name="dialog_cancel">取 消 </string>
+    <string name="dialog_title">提示</string>
+    <string name="delete_delete_all_songs">同时删除 所选歌曲</string>
+    <string name="delete_dialog_song">确定移除所选歌曲?</string>
+    <string name="update">版本升级</string>
+    <string name="update_yes">立即更新</string>
+    <string name="update_no">不更新</string>
+
+    <!-- 添加到...Dialog -->
+    <string name="addto_dialog_waiting">正在添加中....</string>
+    <string name="addto_dialog_play_queue">播放列表</string>
+    <string name="addto_dialog_wait_title">天天酷音</string>
+    <string name="addto_dialog_wait_message">正在添加</string>
+
+    <!-- 菜单 内容 -->
+    <string name="menu_scan">本地扫描</string>
+    <string name="menu_sleep_timer">睡眠定时</string>
+    <string name="menu_download">下载管理</string>
+    <string name="menu_change_skin">设置</string>
+    <string name="menu_feedback">意见反馈</string>
+    <string name="menu_about_us">关于我们</string>
+    <string name="menu_check_updata">检查更新</string>
+    <string name="menu_exit">退出</string>
+
+    <!-- 在线 精选集 -->
+
+    <string name="online_featured_set_title">推荐</string>
+    <string name="online_share_musiclist">分享歌单</string>
+    <string name="online_callfor_download">预约下载</string>
+    <string name="online_singer_bydownloadnum">人气</string>
+    <string name="online_singer_bydate">最新</string>
+    <string name="net_more_txt">加 载 更 多</string>
+    <string name="online_singer_birthday_txt">出生时间 ：</string>
+    <string name="online_singer_constellation_txt">星座 ：</string>
+    <string name="online_singer_bloodType_txt">血型 ：</string>
+    <string name="online_singer_stature_txt">身高 ：</string>
+    <string name="no_singer">未知歌手</string>
+    <string name="no_tag">sun·music精选</string>
+
+    <!-- 下载 内容 -->
+    <string name="downloading">正在下载</string>
+    <string name="downloaded">已下载</string>
+    <string name="downloadAll">全部下载</string>
+    <string name="pauseAll">全部暂停</string>
+    <string name="clearAll">清空列表</string>
+    <string name="ask_delete">是否要删除？</string>
+    <string name="delete_sure">是</string>
+    <string name="delete_negative">否</string>
+    <string name="task_exit">您要下载的资源已存在或正在下载</string>
+    <string name="no_sdcard">外部存储器不可用</string>
+    <string name="download_task_add">已加入下载队列</string>
+    <string name="download_task_wifi">已预约</string>
+    <string name="download_task_all">已全部加入预约下载队列</string>
+	<string name="download_other">其他</string>
+    <!-- 本地批量操作 -->
+    <string name="local_batch_edit_music_checkAll">全选</string>
+    <string name="local_batch_edit_music_addTo">添加到</string>
+    <string name="local_batch_edit_music_delete">删除</string>
+    <string name="local_batch_edit_music_ok">确定</string>
+    <string name="local_batch_edit_music_cancel">取消</string>
+
+    <!-- 睡眠定时 -->
+    <string name="sleep_timer_set_title">定时退出嗨歌音乐（分钟）</string>
+    <string name="sleep_timer_wrong_msg">请输入正确的时间值</string>
+    <string name="sleep_timer_toast_msg1">嗨歌音乐将在</string>
+    <string name="sleep_timer_toast_msg2">分钟后退出。</string>
+    <string name="sleep_timer_cancel_title">距离退出天天酷音还有：</string>
+    <string name="sleep_timer_cancel_min">分钟</string>
+    <string name="sleep_timer_cancel_btn">取消定时</string>
+    <string name="sleep_timer_cancel_msg">睡眠定时已取消</string>
+
+    <!-- 在线推荐 内容 -->
+    <string name="recommend_newSong">新歌推荐</string>
+    <string name="loading_more">加 载 更 多</string>
+    <string name="already_load">已全部加载，共 </string>
+    <string name="total_datas"> 首歌</string>
+    <string name="total_string"> 个</string>
+    
+    <!-- 通知栏消息 -->
+    <string name="notification_title">天天酷音音乐</string>
+    <string name="notification_download_title">天天酷音下载</string>
+    <string name="notification_download_music_appointment">通过WIFI网络下载预约歌曲</string>
+    <string name="notification_download_music_content">天天酷音音乐</string>
+    
+</resources>

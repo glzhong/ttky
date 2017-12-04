@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/szf_background_title"
+        android:gravity="center_vertical" >
+
+       
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/login_title"
+        android:background="@drawable/szf_background"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:scrollbars="none" >
+
+            <include layout="@layout/szf_mobilerechar_main_scroll" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" 
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="5dip">
+
+            <TextView
+                android:id="@+id/rechargereminda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:text="@string/szf_rechargeremind"
+                android:textSize="12dp" 
+                android:textColor="#000000">
+            </TextView>
+			<TextView
+                android:id="@+id/rechargeremindb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:text="@string/szf_rechargeremind"
+                android:textSize="12dp"
+                android:textColor="#000000" >
+            </TextView>
+            <Button
+                android:id="@+id/sure_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="10dip"
+                android:layout_below="@+id/rechargereminda"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/szf_btn_sure_xml"
+                android:text="@string/szf_phone_sure"
+                android:textSize="20dip" 
+                android:textColor="@color/szf_white"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

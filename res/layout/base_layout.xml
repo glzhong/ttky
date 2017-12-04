@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 用于BaseActivity显示 -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f1ebf0" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- 隐藏的TabWidget,visibility="gone" -->
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+        <!-- 标签内容 -->
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" />
+
+        <!-- 用户可见的“tabs”实际上是一组按钮 -->
+
+        <RadioGroup
+            android:id="@+id/tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#2c2f33"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/local"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="#2c2f33"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/online_music" />
+
+            <RadioButton
+                android:id="@+id/online"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="#2c2f33"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/local_music" />
+
+            <RadioButton
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="1.0dip"
+                android:layout_weight="1.0"
+                android:background="#2c2f33"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/search_music" />
+        </RadioGroup>
+
+        <include
+            android:id="@+id/bottom_progressbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tab_group"
+            android:layout_gravity="bottom"
+            layout="@layout/bottom_progressbar" />
+    </RelativeLayout>
+
+</TabHost>

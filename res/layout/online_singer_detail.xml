@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical" >
+   <!-- 用来撑开整个view布局的宽度  如果 listview的数据很小的话 动画效果 就不明显 很短了 -->
+
+    <!-- 本地歌曲title -->
+    <include
+        android:id="@+id/title_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/title" />
+    <!-- 主界面九宫格 -->
+
+
+    <!-- 本地模块_本地首页 -->
+    <!--
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="本地首页" />
+    <Button
+        android:id="@+id/allSongs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去全部歌曲页" />
+    <Button
+        android:id="@+id/singers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去歌手页" />
+    <Button
+        android:id="@+id/album"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去专辑页" />
+    <Button
+        android:id="@+id/folders"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去歌曲文件夹列表页" />
+    <Button
+        android:id="@+id/myFave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去我的最爱页" />
+    <Button
+        android:id="@+id/recently"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去最近添加页" />
+
+    <Button
+        android:id="@+id/songSingle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去歌单页" />
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewClick"
+        android:text="去扫描页" />
+
+    -->
+
+    <LinearLayout
+        android:id="@+id/online_singer_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdge="none"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/online_feature_set_more_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/online_singer_detail_image"
+                            android:layout_width="95dip"
+                            android:layout_height="95dip"
+                            android:layout_margin="5dip"
+                            android:adjustViewBounds="true"
+                            android:background="#ffffff"
+                            android:padding="5dip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/default_img" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/online_singername_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginLeft="5dip"
+                                android:ellipsize="end"
+                                android:maxWidth="160dip"
+                                android:singleLine="true"
+                                android:textColor="#505050"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dip" >
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/online_singer_birthday_txt"
+                                    android:textColor="#7b7b7b" />
+
+                                <TextView
+                                    android:id="@+id/online_singerbirth_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#7b7b7b" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dip" >
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/online_singer_constellation_txt"
+                                    android:textColor="#7b7b7b" />
+
+                                <TextView
+                                    android:id="@+id/online_singerconstellation_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#7b7b7b" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dip"
+                                    android:text="@string/online_singer_bloodType_txt"
+                                    android:textColor="#7b7b7b"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/online_singerbloodType_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#7b7b7b"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dip" >
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/online_singer_stature_txt"
+                                    android:textColor="#7b7b7b" />
+
+                                <TextView
+                                    android:id="@+id/online_singerstature_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#7b7b7b" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/online_btn_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_below="@id/online_feature_set_more_lay"
+                        android:background="@drawable/group_divider"
+                        android:gravity="center_vertical" >
+
+                        <Button
+                            android:id="@+id/online_shot_musiclist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/online_singer_info_order_left_btn"
+                            android:text="@string/online_singer_bydownloadnum"
+                            android:textColor="#505050" />
+
+                        <Button
+                            android:id="@+id/online_snew_musiclist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/online_singer_info_order_right_btn"
+                            android:text="@string/online_singer_bydate"
+                            android:textColor="#505050" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/online_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/online_btn_lay"
+                        android:orientation="vertical" >
+
+                        <ListView
+                            android:id="@+id/online_set_detail_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/list_divider_line_img"
+                            android:fadingEdge="none"
+                            android:listSelector="@drawable/item_selector" >
+                        </ListView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+ 	<include
+            android:id="@+id/loading"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/loading_layout" />
+ 	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include
+            android:id="@+id/neterror_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            layout="@layout/neterror_layout" />
+    </RelativeLayout>
+ 	
+</LinearLayout>

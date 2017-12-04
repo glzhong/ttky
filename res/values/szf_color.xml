@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <color name = "szf_green">#2E8B57</color> 
+      <color name = "szf_blue">#ffDFF6FD</color> 
+      	<color name="szf_reda">#ff740100</color>
+      	<color name="szf_red">#ffff0000</color>
+      	<color name="szf_yellow">#FFFF00</color>
+      	<color name="szf_title">#2E425E</color>
+      	<color name="szf_white">#ffffffff</color>
+      	<color name="szf_black">#ff000000</color>
+      	<color name="szf_text_font">#ff175468</color>
+      		<color name="szf_full_alpha">#00FFFFFF</color>
+      		<color name="szf_org">#ff9000</color>
+</resources>

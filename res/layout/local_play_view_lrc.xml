@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    >
+    
+    <com.tiantiankuyin.view.LrcTimeLine
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:id="@+id/olv">
+
+        <com.tiantiankuyin.view.LrcView
+            android:id="@+id/playview_detail_lyric"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="12dip"
+            android:layout_marginBottom="12dip"
+            android:scrollHorizontally="true"
+            android:scrollbars="none" 
+            android:layout_gravity="center">
+        </com.tiantiankuyin.view.LrcView>
+    </com.tiantiankuyin.view.LrcTimeLine>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_gravity="top">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/lyric_mask_top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/lyric_mask_bottom" />
+    </LinearLayout>
+
+</FrameLayout>

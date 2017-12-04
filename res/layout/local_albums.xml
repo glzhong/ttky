@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 本地模块_专辑页 -->
+
+    <include
+        android:id="@+id/title_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/title" />
+
+    <com.tiantiankuyin.view.EasouPinneListView
+        android:id="@+id/albumsListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_parent"
+        android:cacheColorHint="#ffffff"
+        android:divider="@drawable/list_divider_line_img"
+        android:dividerHeight="1dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:listSelector="#00fe2345"
+        android:scrollingCache="false" />
+
+    <TextView
+        android:id="@+id/tvLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/sort_key_select_bg_img"
+        android:gravity="center"
+        android:maxWidth="70dip"
+        android:minWidth="70dip"
+        android:padding="10dip"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold" >
+    </TextView>
+
+    <com.tiantiankuyin.view.EasouSideBar
+        android:id="@+id/sideBar"
+        android:layout_width="30dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/title_parent" />
+
+</RelativeLayout>

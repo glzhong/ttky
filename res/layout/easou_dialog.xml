@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 对话框标题 -->
+
+    <include
+        android:id="@+id/title_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/dialog_title" />
+
+    <!-- 对话框正文内容 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background_img"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/normal_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contentTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:gravity="left|top"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:text="This is a contentvxcvcxvsdasdasdadfghfghfhfghsdfsadfs"
+                android:textColor="#484848"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edit_easoudlg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/dialog_input_bg_img"
+                android:hint="#7b7b7b"
+                android:textSize="15sp"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/check_btn_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/check_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:text="是否删除本地文件除"
+                    android:textColor="#484848"
+                    android:textSize="15dip" />
+
+                <CheckBox
+                    android:id="@+id/ck_comfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_small_selector"
+                    android:textColor="#484848"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    android:clickable="false"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prg_container"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/prgb_easoudialog"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginTop="10dip" />
+
+                <TextView
+                    android:id="@+id/prgb_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:text="please wait..."
+                    android:textColor="#505050"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/radioBtn_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:orientation="vertical"
+                android:visibility="gone" >
+		<!--  android:layout_marginLeft="10dip" -->
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                    android:orientation="vertical" 
+                    >
+
+                    <RadioButton
+                        android:id="@+id/high_radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:button="@drawable/setting_radio_btn_click"
+                          android:layout_marginLeft="10dip"
+                        android:textColor="#484848" />
+
+                    <TextView
+                        android:id="@+id/first_intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:textColor="#7b7b7b"
+                          android:layout_marginLeft="20dip"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/list_divider_line_img" />
+
+                    <RadioButton
+                        android:id="@+id/low_radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/setting_radio_btn_click"
+                         android:layout_marginLeft="10dip"
+                        android:textColor="#484848" />
+
+                    <TextView
+                        android:id="@+id/second_intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:textColor="#7b7b7b"
+                          android:layout_marginLeft="20dip"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/checklist_container"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/okContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/sigleOkBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dip"
+                android:layout_marginRight="70dip"
+                android:background="@drawable/dialog_button_bg"
+                android:text="OK"
+                android:textColor="#505050"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/okAndCancelContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/okBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="OK"
+                    android:textColor="#505050"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="OK"
+                    android:textColor="#505050"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/okAndMoreAndCancelContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/moreOkBtn"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="OK"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/moreBtn"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="OK"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/moreCancelBtn"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="OK"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/operate_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/list_divider_line_img"
+            android:listSelector="@drawable/item_selector"
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>
+
+    <!-- 只用来显示check list的布局 -->
+
+
+    <!-- 只包含“确定”按钮的容器 -->
+
+
+    <!-- 包含“确定”和“取消”按钮的容器 -->
+
+
+    <!-- 包含含有3个按钮的容器 -->
+
+</LinearLayout>

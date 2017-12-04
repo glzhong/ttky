@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/local_scan_banner_bg_img" >
+
+    <com.tiantiankuyin.view.LocalScanBannerGallery
+        android:id="@+id/local_scan_banner_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fadingEdgeLength="0dip"
+        android:soundEffectsEnabled="false"
+        android:spacing="0.0dip" />
+
+    <LinearLayout
+        android:id="@+id/local_scan_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal" >
+
+        <include
+            android:id="@+id/local_scan_pointContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/local_scan_indicate_point" >
+        </include>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/szf_background"
+    android:orientation="vertical" >
+ 
+    <RelativeLayout
+        android:id="@+id/init_one"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        >
+		
+        <TextView
+            android:id="@+id/aaa"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="80dip"
+            android:gravity="center_horizontal"
+            android:text="神州付游戏充值卡充值_测试"
+            android:textSize="22dip" 
+            android:textColor="@color/szf_black"> 
+        </TextView>
+       <EditText
+           android:id="@+id/cash_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aaa"
+            android:hint="请输入金额"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dip" 
+            android:textColor="@color/szf_black"
+            android:visibility="gone"></EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/init_one"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dip">
+           <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:scrollbars="none" >
+        <RelativeLayout
+ 		android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <Button
+            android:id="@+id/init_btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/szf_btn_sure_xml"
+            android:text="支付宝账号充值                                        》"
+            android:textSize="15dip"
+            android:textColor="@color/szf_white"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/recharge_btn"
+            android:layout_below="@+id/init_btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/szf_btn_sure_xml"
+            android:text="手机充值卡充值                                        》"
+            android:textSize="15dip" 
+            android:textColor="@color/szf_white"/>
+        <Button
+            android:id="@+id/init_btn3"
+            android:layout_below="@+id/recharge_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip" 
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/szf_btn_sure_xml"
+            android:text="Q币充值                                                    》"
+            android:textSize="15dip"
+            android:textColor="@color/szf_white"
+            android:visibility="gone"/>
+         
+         
+         </RelativeLayout>
+                 </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

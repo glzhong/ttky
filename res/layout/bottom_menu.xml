@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/menu_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#b0000000" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/scan_bottom_bg_img"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <!-- 第一行 -->
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_menu1"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:orientation="horizontal" >
+
+            <!-- 歌曲扫描 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_scan"
+                    android:src="@drawable/menu_scan_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text1"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_scan" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menu_split_line_v_img"
+                android:scaleType="fitXY" />
+            
+            <!-- 睡眠定时 -->
+            <!-- 由于第一版需求暂时不做睡眠定时，所以暂时先隐藏 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item7"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:clickable="false"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_sleep_timer"
+                    android:src="@drawable/menu_sleeptimer_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text7"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_sleep_timer" />
+            </RelativeLayout>
+            
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menu_split_line_v_img" />
+
+            <!-- 下载管理 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item2"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_download"
+                    android:src="@drawable/menu_download_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text2"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_download" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menu_split_line_v_img" />
+
+            <!-- 设置背景 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item3"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_feedback"
+                    android:src="@drawable/menu_setting_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text3"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_change_skin" />
+
+            </RelativeLayout>
+
+            
+        </LinearLayout>
+        <!-- 第一行完 -->
+
+        <ImageView
+            android:id="@+id/menu_boder_horizongtal"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/list_divider_line_img"/>
+
+        <!-- 第二行菜单 -->
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_menu2"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:orientation="horizontal" >
+            
+            <!-- 意见反馈 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item4"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_feedback"
+                    android:src="@drawable/menu_feedback_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text4"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_feedback" />
+            </RelativeLayout>
+            
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menu_split_line_v_img" />
+            
+            <!-- 关于我们 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item5"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_check_updata"
+                    android:src="@drawable/menu_about_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text5"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_about_us" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menu_split_line_v_img" />
+
+            <!-- 检查更新 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item6"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_check_updata"
+                    android:src="@drawable/menu_update_icon_img" />
+
+                <TextView
+                    android:id="@+id/item_text6"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_check_updata" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/menu_split_line_v_img" />
+
+            <!-- 退出 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item8"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector"
+                android:saveEnabled="false" >
+
+                <ImageView
+                    android:id="@+id/item_image8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dip"
+                    android:contentDescription="@string/menu_exit"
+                    android:src="@drawable/menu_scan_exit_img" />
+
+                <TextView
+                    android:id="@+id/item_text8"
+                    style="@style/menuTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="@string/menu_exit" />
+            </RelativeLayout>
+
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        layout="@layout/title" />
+<LinearLayout  
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/vip_bg_img"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+   
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="102dp"
+                android:src="@drawable/vip_photo"
+                android:textColor="#EF4E4E"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/kaitong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="开通会员"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:background="@drawable/kthy_btn"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="业务名称：特色最前沿 "
+            android:textColor="#FFFFFF"
+            android:textSize="21dp" />
+        <TextView
+           
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="资费：10元/月"
+            android:textColor="#C1E168"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="会员权益：\n1.天天酷音提供独家的前沿音乐\n2.会员享受10首优质歌曲下载\n3.歌曲每月更新一次"
+            android:textColor="#2B2A2B"
+            android:textSize="15dp" />
+    </LinearLayout>
+</LinearLayout>
+<LinearLayout  android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:orientation="horizontal">
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+          >
+        <Button
+            android:id="@+id/selectall"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="9dip"
+            android:gravity="center"
+            android:drawableLeft="@drawable/icon_selectall"
+            android:background="@null"
+            android:textColor="#FFFFFF"
+            android:text="全选"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/inverseselect"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="69dip"
+            android:drawableLeft="@drawable/icon_deselectall"
+            android:background="@null"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:text="反选" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="129dip"
+            android:drawableLeft="@drawable/icon_cancel"
+            android:background="@null"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/download"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="189dip"
+            android:drawableLeft="@drawable/icon_download"
+            android:background="@null"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:text="下载" />
+        
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_marginLeft="260dip"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:text="" />
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#d8d1d7"
+            android:dividerHeight="0.5dip"
+            android:visibility="visible"
+             >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

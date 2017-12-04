@@ -1,0 +1,665 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tiantiankuyin"
+    android:versionCode="35"
+    android:versionName="3.0.5.3" >
+    <uses-sdk
+        android:minSdkVersion="8" 
+         /> 
+
+    <!-- Use Permission Start 请在使用每个权限前说明该权限的用途以及使用出处 -->
+    <!-- 友盟权限 -->
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <!-- SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取WIFI状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+    <!-- 获取网络连接状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取电话状态权限 -->
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取电源管理权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> 
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+
+    <!-- 易宝 -->
+    <!-- 读取电话状态 -->
+    <!-- 写短信 -->
+ 
+ 
+ 
+ 
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 话费支付 -->
+	<uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" /> 
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	 <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" /> 
+
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> 
+
+
+    <!-- Use Permission End -->
+
+    <application
+        android:name="com.tiantiankuyin.TianlApp"
+        android:enabled="true"
+        android:icon="@drawable/splash_icon"
+        android:label="@string/welcome"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <meta-data
+            android:name="miguopen_appid"
+            android:value="appid:007111455428556680"/>
+        <!-- <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="505451795270152d6b00015a" >
+        </meta-data> -->	
+        <meta-data
+            android:name="excode"
+            android:value="excode:1234">
+        </meta-data>
+        <meta-data
+            android:name="miguopen_chcode"
+            android:value="chcode:014A1IJ" />
+        
+        
+        
+   
+        <activity
+            android:name="com.tiantiankuyin.component.activity.SplashActivity"
+            android:label="@string/welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" >
+                </action>
+
+                <category android:name="android.intent.category.DEFAULT" >
+                </category>
+
+                <data android:mimeType="audio/*" >
+                </data>
+            </intent-filter>
+        </activity>
+
+        <!-- 引导页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.GUIDE_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- BaseActivity -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.BaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.BASE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- MusicListAcitvity -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.MusicListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.MUSIC_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 更新 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.UpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/easouDialog" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.UPDATE_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 下载页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.DownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.DOWNLOAD_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 正在下载页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.DownloadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.DOWNLOADING_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 已经下载页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.DownloadedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.DOWNLOADED_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 设置 -com.tiantiankuyin.intent.SETTING_ACTIVITY -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.SETTING_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地 -->
+        <!-- 本地_首页 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.LocalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 歌单列表 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.SongListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SONG_LIST_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_全部歌曲 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.AllSongsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_ALL_SONGES_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_歌手 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.SingersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SINGERS_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_专辑 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.AlbumsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_ALBUMS_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_歌曲文件夹列表 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.SongFoldersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SONG_FOLDERS_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 本地_歌曲文件夹列表的歌曲列表 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.SongFolderSubActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SONG_SUB_FOLDERS_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_我的最爱 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.MyFavoriteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_FAVORITE_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_最近添加 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.RecentlyAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_RECENTLY_ADD_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_歌单 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.SongTablesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SONG_TABLE__ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_扫描 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.ScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SCAN_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_自定义文件夹选择 扫描 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.ScanFolderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_SCAN_FOLDER_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 本地_歌曲列表批量操作 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.BatchEditMusicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.LOCAL_BATCH_EDIT_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 在线 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.OnlineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线 _推荐 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.RecommendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.online.RECOMMEND_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线 _榜单 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.RecommendExActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+        <!--
+        <activity
+            android:name=".component.activity.online.HotSaleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+        -->
+        <!-- 在线 _分类 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.CategoryActivityTrth"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+              <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.CategoryActivityTrth" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+              <activity
+            android:name="com.tiantiankuyin.component.activity.online.CategoryActivityTen"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+              <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.CategoryActivityTen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.CategoryActivityTwenty"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+              <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.CategoryActivityTwenty" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 在线 _分类 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.SimilarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+
+        <!-- 在线 _歌手 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.SingerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+		 <activity
+            android:name="com.tiantiankuyin.component.activity.online.MonthVipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+        
+        <!-- 意见反馈 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/cr_dialog" >
+        </activity>
+
+        <!-- 关于我们 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+
+        <!-- 在线 _精选集 -->
+         <activity
+            android:name="com.tiantiankuyin.component.activity.online.RecommendEExActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+       <!--   <activity
+            android:name=".component.activity.online.OmnibusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_FEATRUED_SET" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>-->
+
+        <!-- 在线榜单的数据列表 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.HotSaleSubListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_HOTSALE_SUBLIST_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 在线分类列表 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.CategorySubListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_CATEGORY_SUBLIST_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 在线 _精选集简介 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.OmnibusIntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_FEATRUED_SET_INTRO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线 _精选集详情 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.OmnibusDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_FEATRUED_SET_MUSIC_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线 _歌手简介 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.SingerIntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_SINGER_INTRO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线 _歌手详细 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.SingerDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_SINGER_DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线 _歌手列表页 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.SingerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_SINGER_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 在线_Banner插件 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.online.plugin.PluginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.action.PLUGIN_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 搜索 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.SEARCH_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tiantiankuyin.component.activity.search.SearchResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.ONLINE_SEARCH_RESULT_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 新的搜索页 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.search.NewSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.NEW_SEARCH_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 播放页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.PlayViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+
+        <!-- 播放主页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.PlayViewMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+        <!-- 播放页面相似歌曲界面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.PlayViewSimilarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+        <!-- 播放页面歌词详情页面 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.local.PlayViewLrcActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+        </activity>
+
+        <!-- 在线 _广告浏览器 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.online.WEBVIEW_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <!-- 免责声明 -->
+        <activity
+            android:name="com.tiantiankuyin.component.activity.WebViewActivityMzsm"
+            android:screenOrientation="portrait"
+            android:theme="@style/notitlebar" >
+ 
+        </activity>
+        <activity android:name="com.tiantiankuyin.component.activity.SongPayInfoAcitivty" />
+        <activity android:name="com.cmsc.cmmusic.common.CMMusicActivity" 
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+
+        <!-- Activity End -->
+
+
+        <!-- Service Start -->
+        <!-- 下载服务 -->
+        <service android:name="com.tiantiankuyin.component.service.DownloadService" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.action.DOWNLOAD_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <!-- 播放服务 -->
+        <service android:name="com.tiantiankuyin.component.service.PlayService" >
+            <intent-filter>
+                <action android:name="com.tiantiankuyin.intent.action.PLAY_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.migu.sdk.service.MiguSdkService" />  
+        <!-- Service End -->
+      <!-- BroadcastReceiver Start -->
+        <!-- BroadcastReceiver End -->
+    </application>
+
+</manifest>

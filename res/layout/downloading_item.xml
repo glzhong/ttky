@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/state"
+        android:layout_width="40dip"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/stateImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dialog_download_icon_img" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/songeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@id/state"
+        android:text=""
+        android:textColor="#505050"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@+id/songeName"
+        android:layout_marginTop="5dip"
+        android:text="预约"
+        android:textColor="#7ba21d"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songeName"
+        android:paddingTop="2dip"
+        android:layout_toRightOf="@id/state"
+        android:text="2.12MB/3.2MB"
+        android:textColor="#7b7b7b"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songeName"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@+id/progress"
+        android:text="66%"
+        android:textColor="#7b7b7b"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songeName"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/state"
+        android:text="点击重试"
+        android:textColor="#e80000"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/delete"
+        android:layout_width="40dip"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/deleteImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dialog_delete_icon_img" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/downing_item_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/retry"
+        android:layout_toLeftOf="@id/delete"
+        android:layout_toRightOf="@id/state"
+        android:paddingRight="20dp"
+        android:progressDrawable="@drawable/progressbar_downloading" />
+
+</RelativeLayout>
